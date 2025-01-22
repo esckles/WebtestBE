@@ -86,7 +86,9 @@ const createAccountEmail = (user) => __awaiter(void 0, void 0, void 0, function*
     });
     const id = user === null || user === void 0 ? void 0 : user._id;
     const pathFile = node_path_1.default.join(__dirname, "../views/otp.ejs");
-    let verificationURL = `https://two-factor-authmije.web.app/auth/otp/${id}`;
+    // let verificationURL = `https://two-factor-authmije.web.app/auth/otp/${id}`;
+    let verificationURL = `https://webtest-fe.web.app/auth/otp/${id}`;
+    // let verificationURL = `http://localhost/api/create-user/otp/${id}`;
     const html = yield ejs_1.default.renderFile(pathFile, {
         name: user === null || user === void 0 ? void 0 : user.email,
         url: verificationURL,
